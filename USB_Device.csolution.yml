@@ -1,6 +1,6 @@
 solution:
   description: USB Device examples
-  created-for: CMSIS-Toolbox@2.6.0
+  created-for: CMSIS-Toolbox@2.12.0
   cdefault:
 
   # List of tested compilers that can be selected
@@ -25,12 +25,24 @@ solution:
       variables:
         - Board-Layer: $SolutionDir()$/Board/STM32F746G-DISCO/Board.clayer.yml
           copied-from: ${CMSIS_PACK_ROOT}/Keil/STM32F746G-DISCO_BSP/1.1.0/Layers/Default/Board.clayer.yml
+      target-set:
+        - set:
+          images:
+            - project-context: MassStorage.Debug
+          debugger:
+            name: ST-Link@pyOCD
+            clock: 4000000
+            protocol: swd
     - type: CustomHW
       device: STM32F746NGHx
       board: STM32F746G-DISCO:Rev.B
       variables:
         - Board-Layer: $SolutionDir()$/Board/CustomHW/Board.clayer.yml
           copied-from: ${CMSIS_PACK_ROOT}/Keil/STM32F746G-DISCO_BSP/1.1.0/Layers/Default/Board.clayer.yml
+      target-set:
+        - set:
+          images:
+            - project-context: HID.Debug
     # - type: <target_name>
     #   board: <board_name>
     #   variables:
