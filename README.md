@@ -1,3 +1,7 @@
+[![License](https://img.shields.io/github/license/Arm-Examples/Middleware_USB_FS?label=License)](https://github.com/Arm-Examples/Middleware_USB_FS/blob/main/LICENSE)
+[![Build Test](https://img.shields.io/github/actions/workflow/status/Arm-Examples/Middleware_USB_FS/mw-usb-fs-ci.yml?logo=arm&logoColor=0091bd&label=Build%20USB%20Middleware)](./.github/workflows/mw-usb-fs-ci.yml)
+
+
 # Using MDK-Middleware with Keil Studio
 
 [<img src="https://github.com/Arm-Examples/.github/raw/main/profile/MiddlewareVideo.png" alt="Developing with MDK-Middleware" width="318" height="205" align="left">](
@@ -45,12 +49,14 @@ This is a list of the relevant files and directories:
 
 | File/Directory | Description |
 |----------------|-------------|
+| [`.github/workflows/`](./.github/workflows)    | GitHub Action file [`mw-usb-fs-ci.yml`](./.github/workflows/mw-usb-fs-ci.yml) builds the HID, MassStorage, and VirtualCOM project. |
 | [vcpkg-configuration.json](./vcpkg-configuration.json) | List of tools installed (by Arm Tools Environment Manager) in VS Code |
 | [USB_Device.csolution.yml](./USB_Device.csolution.yml) | Main solution file containing USB Device example projects |
 | [HID](./HID) | USB HID Device example project  (not used for the application)  |
 | [MassStorage](./MassStorage) | USB Mass Storage Device example project (adapted for user application) |
 | [VirtualCOM](./VirtualCOM) | USB Virtual COM Port Device example project (not used for the application) |
 | [Board](./Board) | Board support layers for STM32F746G-DISCO and custom hardware |
+
 
 ## References
 
