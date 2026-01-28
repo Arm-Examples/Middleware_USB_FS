@@ -49,7 +49,7 @@ This is a list of the relevant files and directories:
 
 | File/Directory | Description |
 |----------------|-------------|
-| [`.github/workflows/`](./.github/workflows)    | GitHub Action file [`mw-usb-fs-ci.yml`](./.github/workflows/mw-usb-fs-ci.yml) builds the HID, MassStorage, and VirtualCOM project. |
+| [`.github/workflows/`](./.github/workflows)    | GitHub Action file [`mw-usb-fs-ci.yml`](./.github/workflows/mw-usb-fs-ci.yml) builds the HID, MassStorage, and VirtualCOM projects. |
 | [vcpkg-configuration.json](./vcpkg-configuration.json) | List of tools installed (by Arm Tools Environment Manager) in VS Code |
 | [USB_Device.csolution.yml](./USB_Device.csolution.yml) | Main solution file containing USB Device example projects |
 | [HID](./HID) | USB HID Device example project  (not used for the application)  |
