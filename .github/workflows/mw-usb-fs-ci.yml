@@ -35,4 +35,4 @@ jobs:
 
       - name: Build USB middleware binaries with AC6 compiler
         run: |
-          cbuild USB_Device.csolution.yml --packs --context .+STM32F746NGHx --toolchain AC6
+          cbuild USB_Device.csolution.yml --packs
