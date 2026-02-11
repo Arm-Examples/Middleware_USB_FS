@@ -27,21 +27,28 @@ solution:
           copied-from: ${CMSIS_PACK_ROOT}/Keil/STM32F746G-DISCO_BSP/1.1.0/Layers/Default/Board.clayer.yml
       target-set:
         - set:
-          images:
-            - project-context: MassStorage.Debug
           debugger:
             name: ST-Link@pyOCD
             clock: 4000000
             protocol: swd
+          images:
+            - project-context: MassStorage.Debug
 
     - type: CustomHW
       device: STM32F746NGHx
+      board: STM32F746G-DISCO:Rev.B
       variables:
         - Board-Layer: $SolutionDir()$/Board/CustomHW/Board.clayer.yml
+          copied-from: ${CMSIS_PACK_ROOT}/Keil/STM32F746G-DISCO_BSP/1.1.0/Layers/Default/Board.clayer.yml
       target-set:
         - set:
           images:
+            - project-context: MassStorage.Debug
             - project-context: HID.Debug
+          debugger:
+            name: ST-Link@pyOCD
+            clock: 4000000
+            protocol: swd
 
   build-types:
     - type: Debug

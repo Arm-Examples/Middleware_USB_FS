@@ -63,6 +63,7 @@
 
 #ifdef   CMSIS_target_header
 #include CMSIS_target_header
+#define CMSIS_DRIVER_USART      ARDUINO_UNO_UART
 #else
 #define CMSIS_DRIVER_USART      0
 #endif

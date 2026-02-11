@@ -3,11 +3,11 @@
 [<img src="https://github.com/Arm-Examples/.github/raw/main/profile/MiddlewareVideo.png" alt="Developing with MDK-Middleware" width="318" height="205" align="left">](
 https://armkeil.blob.core.windows.net/developer/Files/videos/KeilStudio/20250729_Working_with_STM32_devices.mp4?#t=07:34 "Developing with MDK-Middleware")
 
-This repository explains how to extend a [MDK-Middleware example](https://arm-software.github.io/MDK-Middleware/latest/General/working_with_examples.html) to an user application. This application starts with [USB Device MassStorage example](https://arm-software.github.io/MDK-Middleware/latest/USB/usbd_example_msc.html) and adds the [File System](https://arm-software.github.io/MDK-Middleware/latest/FileSystem/index.html) for data storage on a SD Card. The BOTTON0 switches data storage access between USB Host (SD Card appears as USB memory device on Host computer) and embedded application for file access.
+This repository explains how to extend an [MDK-Middleware example](https://arm-software.github.io/MDK-Middleware/latest/General/working_with_examples.html) to a user application. This application starts with the [USB Device MassStorage example](https://arm-software.github.io/MDK-Middleware/latest/USB/usbd_example_msc.html) and adds the [File System](https://arm-software.github.io/MDK-Middleware/latest/FileSystem/index.html) for data storage on an SD Card. The BUTTON0 switches data storage access between USB Host (SD Card appears as a USB memory device on the Host computer) and the embedded application for file access.
 
-Initial development starts on the [STM32F746G-DISCO board](https://www.keil.arm.com/packs/stm32f746g-disco_bsp-keil) with a compatible [board layer](.\Board\STM32F746G-DISCO). A [copy of this layer](.\Board\CustomHW) is then modified for the user hardware. In [USB_Device.csolution.yml](./USB_Device.csolution.yml) two target-types enable development on DISCO board or CustomHW.
+Initial development starts on the [STM32F746G-DISCO board](https://www.keil.arm.com/packs/stm32f746g-disco_bsp-keil) with a compatible [board layer](.\Board\STM32F746G-DISCO). A [copy of this layer](.\Board\CustomHW) is then modified for the user hardware. In [USB_Device.csolution.yml](./USB_Device.csolution.yml) two target-types enable development on the DISCO board or CustomHW.
 
-The device peripherals are configured using STM32CubeMX and with it A/D converter functionality is added. For debugging ST-LINK, a CMSIS-DAP adapter, or J-Link may be used.
+The device peripherals are configured using STM32CubeMX, and with it, A/D converter functionality is added. For debugging ST-LINK, a CMSIS-DAP adapter, or J-Link may be used.
 
 **[Watch this video to learn more...](https://armkeil.blob.core.windows.net/developer/Files/videos/KeilStudio/20250729_Working_with_STM32_devices.mp4?#t=07:34 "Using MDK-Middleware with USB Device and File System")**
 
@@ -20,7 +20,7 @@ The device peripherals are configured using STM32CubeMX and with it A/D converte
 5. In the CMSIS view, use the [Action buttons](https://github.com/ARM-software/vscode-cmsis-csolution?tab=readme-ov-file#action-buttons) to build, load and debug the example on the hardware.
 
 > [!TIP]
-> Examples can be explored using the [Keil MDK Community edition](https://www.keil.arm.com/keil-mdk/#mdk-v6-editions) that is free-to-use for training and evaluation.
+> Examples can be explored using the [Keil MDK Community edition](https://www.keil.arm.com/keil-mdk/#mdk-v6-editions), which is free-to-use for training and evaluation.
 
 ## How it works
 
@@ -28,7 +28,7 @@ The device peripherals are configured using STM32CubeMX and with it A/D converte
 
   When the application starts, `USBD_MSC0_SetMediaOwnerUSB()` is called in the function `app_main_thread()`. The storage media is then controlled by the USB interface and the host PC can read/write files to the device.
 
-- When Button is Pressed:
+- When the Button is pressed:
 
   The application calls `USBD_MSC0_SetMediaOwnerFS()` which transfers media ownership from USB to the user File System interface. Now the embedded application can safely access the file system. The application reads the file `Test.txt` and once this is complete, it calls `USBD_MSC0_SetMediaOwnerUSB()` to return ownership back to USB.
 
