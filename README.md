@@ -1,3 +1,7 @@
+[![License](https://img.shields.io/github/license/Arm-Examples/Middleware_USB_FS?label=License)](https://github.com/Arm-Examples/Middleware_USB_FS/blob/main/LICENSE)
+[![Build Test](https://img.shields.io/github/actions/workflow/status/Arm-Examples/Middleware_USB_FS/mw-usb-fs-ci.yml?logo=arm&logoColor=0091bd&label=Build%20USB%20Middleware)](./.github/workflows/mw-usb-fs-ci.yml)
+
+
 # Using MDK-Middleware with Keil Studio
 
 [<img src="https://github.com/Arm-Examples/.github/raw/main/profile/MiddlewareVideo.png" alt="Developing with MDK-Middleware" width="318" height="205" align="left">](
