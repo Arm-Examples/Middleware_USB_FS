@@ -21,7 +21,7 @@ The device peripherals are configured using STM32CubeMX, and with it, A/D conver
 2. Clone this repository (for example using [Git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)) or download the ZIP file. Then open the base folder in VS Code.
 3. Open the [CMSIS View](https://mdk-packs.github.io/vscode-cmsis-solution-docs/userinterface.html#2-main-area-of-the-cmsis-view). This should show the **USB_Device** application with the selected project **MassStorage**.
 4. The related tools and software packs are downloaded and installed. Review progress with View - Output - CMSIS Solution.
-5. In the CMSIS view, use the [Action buttons](https://github.com/ARM-software/vscode-cmsis-csolution?tab=readme-ov-file#action-buttons) to build, load and debug the example on the hardware.
+5. In the CMSIS view, use the [Action buttons](https://github.com/Open-CMSIS-Pack/vscode-cmsis-solution#action-buttons) to build, load and debug the example on the hardware.
 
 > [!TIP]
 > Examples can be explored using the [Keil MDK Community edition](https://www.keil.arm.com/keil-mdk/#mdk-v6-editions), which is free-to-use for training and evaluation.
